@@ -12,6 +12,11 @@
 		14D4F9292C8D589F0093FA42 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9282C8D589F0093FA42 /* Item.swift */; };
 		14D4F92B2C8D58A10093FA42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D4F92A2C8D58A10093FA42 /* Assets.xcassets */; };
 		14D4F92E2C8D58A10093FA42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D4F92D2C8D58A10093FA42 /* Preview Assets.xcassets */; };
+		14D4F9372C8D59B60093FA42 /* BoringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9362C8D59B60093FA42 /* BoringViewModel.swift */; };
+		14D4F93A2C8D59DE0093FA42 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9392C8D59DE0093FA42 /* SettingsView.swift */; };
+		14D4F93D2C8D5A150093FA42 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 14D4F93C2C8D5A150093FA42 /* KeyboardShortcuts */; };
+		14D4F9402C8D5A220093FA42 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 14D4F93F2C8D5A220093FA42 /* LaunchAtLogin */; };
+		14D4F9432C8D5BA30093FA42 /* BundleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9422C8D5BA30093FA42 /* BundleInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,9 @@
 		14D4F92A2C8D58A10093FA42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14D4F92D2C8D58A10093FA42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14D4F92F2C8D58A10093FA42 /* TheBoringWorker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheBoringWorker.entitlements; sourceTree = "<group>"; };
+		14D4F9362C8D59B60093FA42 /* BoringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringViewModel.swift; sourceTree = "<group>"; };
+		14D4F9392C8D59DE0093FA42 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		14D4F9422C8D5BA30093FA42 /* BundleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D4F9402C8D5A220093FA42 /* LaunchAtLogin in Frameworks */,
+				14D4F93D2C8D5A150093FA42 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,9 @@
 		14D4F9232C8D589F0093FA42 /* TheBoringWorker */ = {
 			isa = PBXGroup;
 			children = (
+				14D4F9412C8D5B800093FA42 /* Extensions */,
+				14D4F9382C8D59D30093FA42 /* views */,
+				14D4F9352C8D599D0093FA42 /* models */,
 				14D4F9242C8D589F0093FA42 /* TheBoringWorkerApp.swift */,
 				14D4F9262C8D589F0093FA42 /* ContentView.swift */,
 				14D4F9282C8D589F0093FA42 /* Item.swift */,
@@ -72,6 +85,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		14D4F9352C8D599D0093FA42 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				14D4F9362C8D59B60093FA42 /* BoringViewModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		14D4F9382C8D59D30093FA42 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				14D4F9392C8D59DE0093FA42 /* SettingsView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		14D4F9412C8D5B800093FA42 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14D4F9422C8D5BA30093FA42 /* BundleInfo.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +125,10 @@
 			dependencies = (
 			);
 			name = TheBoringWorker;
+			packageProductDependencies = (
+				14D4F93C2C8D5A150093FA42 /* KeyboardShortcuts */,
+				14D4F93F2C8D5A220093FA42 /* LaunchAtLogin */,
+			);
 			productName = TheBoringWorker;
 			productReference = 14D4F9212C8D589F0093FA42 /* TheBoringWorker.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +157,10 @@
 				Base,
 			);
 			mainGroup = 14D4F9182C8D589F0093FA42;
+			packageReferences = (
+				14D4F93B2C8D5A150093FA42 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				14D4F93E2C8D5A220093FA42 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = 14D4F9222C8D589F0093FA42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,7 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D4F93A2C8D59DE0093FA42 /* SettingsView.swift in Sources */,
 				14D4F9272C8D589F0093FA42 /* ContentView.swift in Sources */,
+				14D4F9372C8D59B60093FA42 /* BoringViewModel.swift in Sources */,
+				14D4F9432C8D5BA30093FA42 /* BundleInfo.swift in Sources */,
 				14D4F9292C8D589F0093FA42 /* Item.swift in Sources */,
 				14D4F9252C8D589F0093FA42 /* TheBoringWorkerApp.swift in Sources */,
 			);
@@ -347,6 +395,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14D4F93B2C8D5A150093FA42 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+		14D4F93E2C8D5A220093FA42 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		14D4F93C2C8D5A150093FA42 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14D4F93B2C8D5A150093FA42 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+		14D4F93F2C8D5A220093FA42 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14D4F93E2C8D5A220093FA42 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14D4F9192C8D589F0093FA42 /* Project object */;
 }
