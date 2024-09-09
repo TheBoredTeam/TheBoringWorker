@@ -1,5 +1,7 @@
 # TheBoringWorker Documentation
 
+![TheBoringWorkerNotifier Build & Test](https://github.com/TheBoredTeam/TheBoringWorker/actions/workflows/cicd.yml/badge.svg)
+
 ## Overview
 
 `TheBoringWorker` is a Swift-based macOS application designed to interface with the `boring.notch` service. It communicates using macOS Distributed Notification Center to send and receive notifications. `TheBoringWorker` sends data and notifications to `boring.notch`, which handles UI integration.
