@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		148544322C8F0CE900943381 /* TheBoringWorkerNotifier in Frameworks */ = {isa = PBXBuildFile; productRef = 148544312C8F0CE900943381 /* TheBoringWorkerNotifier */; };
+		148544352C8F5B3200943381 /* ExampleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148544342C8F5B3200943381 /* ExampleManager.swift */; };
 		14D4F9252C8D589F0093FA42 /* TheBoringWorkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9242C8D589F0093FA42 /* TheBoringWorkerApp.swift */; };
 		14D4F9272C8D589F0093FA42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9262C8D589F0093FA42 /* ContentView.swift */; };
 		14D4F9292C8D589F0093FA42 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9282C8D589F0093FA42 /* Item.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		148544342C8F5B3200943381 /* ExampleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleManager.swift; sourceTree = "<group>"; };
 		14D4F9212C8D589F0093FA42 /* TheBoringWorker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBoringWorker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D4F9242C8D589F0093FA42 /* TheBoringWorkerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBoringWorkerApp.swift; sourceTree = "<group>"; };
 		14D4F9262C8D589F0093FA42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148544332C8F5B2200943381 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				148544342C8F5B3200943381 /* ExampleManager.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
 		14D4F9182C8D589F0093FA42 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		14D4F9232C8D589F0093FA42 /* TheBoringWorker */ = {
 			isa = PBXGroup;
 			children = (
+				148544332C8F5B2200943381 /* managers */,
 				14D4F9412C8D5B800093FA42 /* Extensions */,
 				14D4F9382C8D59D30093FA42 /* views */,
 				14D4F9352C8D599D0093FA42 /* models */,
@@ -193,6 +204,7 @@
 			files = (
 				14D4F93A2C8D59DE0093FA42 /* SettingsView.swift in Sources */,
 				14D4F9272C8D589F0093FA42 /* ContentView.swift in Sources */,
+				148544352C8F5B3200943381 /* ExampleManager.swift in Sources */,
 				14D4F9372C8D59B60093FA42 /* BoringViewModel.swift in Sources */,
 				14D4F9432C8D5BA30093FA42 /* BundleInfo.swift in Sources */,
 				14D4F9292C8D589F0093FA42 /* Item.swift in Sources */,
@@ -327,13 +339,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TheBoringWorker/TheBoringWorker.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheBoringWorker/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = JPWMG84CH8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -360,13 +372,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TheBoringWorker/TheBoringWorker.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheBoringWorker/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = JPWMG84CH8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

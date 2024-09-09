@@ -5,8 +5,8 @@
 //  Created by Harsh Vardhan  Goswami  on 08/09/24.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct TheBoringWorkerApp: App {
@@ -15,7 +15,7 @@ struct TheBoringWorkerApp: App {
             Item.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
@@ -25,7 +25,6 @@ struct TheBoringWorkerApp: App {
     
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @AppStorage("showMenuBarIcon") var showMenuBarIcon: Bool = true
-    
     
     var body: some Scene {
         Settings {
@@ -53,12 +52,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
     let vm: BoringViewModel = .init()
     var window: NSWindow!
+    let exampleManager: ExampleManager
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return false
     }
     
     override init() {
+        exampleManager = ExampleManager(vm: vm)
         super.init()
     }
     
@@ -67,7 +68,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        
         vm.setupWorkerNotifiers()
         
         NSApp.setActivationPolicy(.accessory)
