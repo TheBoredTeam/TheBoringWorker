@@ -50,7 +50,7 @@ let notifier = TheBoringWorkerNotifier()
 
 ## Posting a Notification
 
-To post a notification, use the following Swift code snippet:
+To post a notification, use the following Swift code snippet: [See example here](https://github.com/TheBoredTeam/TheBoringWorker/blob/e2915fcadf633acf879b8a882cd05c79a70f2a75/TheBoringWorker/models/BoringViewModel.swift#L30), you can create a method here and this is `vm` can be passed to your helper classes.
 
 ```swift
 notifier.postNotification(name: "theboringteam.theboringworker.togglemic", userInfo: ["key": "value"])
@@ -77,9 +77,17 @@ notifier.setupObserver(notification: notifier.toggleMicNotification) { notificat
 
 Create your own notifications using `WorkerNotification` struct available with `TheBoringWorkerNotifier`
 
+## How the heck boring.notch will know about the notification
+
+Setup a new observer using `notifier.setupObserver` method here: [Click here](https://github.com/TheBoredTeam/boring.notch/blob/3362f50b9c57b158f73b144581def1a02746b567/boringNotch/models/BoringViewModel.swift#L207)
+
+![80466](https://github.com/user-attachments/assets/833a0450-52dc-41e9-a679-5cc1bd708b1e)
+
 ## UI Integration
 
 The user interface for `TheBoringWorker` is integrated within `boring.notch`. `TheBoringWorker` focuses on backend operations and notification handling, while `boring.notch` handles the user interface components.
+
+So new ui elements goes into: [Check this](https://github.com/TheBoredTeam/boring.notch/blob/3362f50b9c57b158f73b144581def1a02746b567/boringNotch/ContentView.swift#L183)
 
 For details on integrating `TheBoringWorker` with `boring.notch`, please refer to the [boring.notch documentation](https://github.com/TheBoredTeam/boring.notch).
 
