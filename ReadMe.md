@@ -10,12 +10,12 @@
 
 - **Send Data**: Transmits data to `boring.notch`.
 - **Receive Notifications**: Listens for notifications from `boring.notch`.
-- **Immediate Notifications**: Supports sending notifications with an "immediate" flag.
+- **Immediate Notifications**: Supports sending notifications with an "deliverImmediately" flag.
 
 ## Prerequisites
 
-- macOS 10.14 or later
-- Xcode 12 or later
+- macOS 14 or later
+- Xcode 15 or later
 
 ## Installation
 
@@ -38,80 +38,44 @@
 
    Build and run the project in Xcode. Ensure all necessary permissions are granted for notifications and inter-process communication.
 
-## Sending Notifications
+## Initialization
 
-To send a notification to `boring.notch`, use the following Swift code snippet:
+To initialize the notifier, use the following Swift code:
 
 ```swift
-import Foundation
-import Cocoa
+import TheBoringWorkerNotifier
 
-func sendNotification(withData data: [String: Any], immediate: Bool = false) {
-    let notificationCenter = NSDistributedNotificationCenter.default
-    let notificationName = "com.theboredteam.boring.notch.notification"
+let notifier = TheBoringWorkerNotifier()
+```
 
-    var userInfo = data
+## Posting a Notification
 
-    notificationCenter.postNotificationName(
-        NSNotification.Name(notificationName),
-        object: nil,
-        userInfo: userInfo,
-        deliverImmediately: immediate
-    )
+To post a notification, use the following Swift code snippet:
+
+```swift
+notifier.postNotification(name: "theboringteam.theboringworker.togglemic", userInfo: ["key": "value"])
+```
+
+## Setting Up an Observer
+
+To set up an observer for notifications, use the following Swift code:
+
+```swift
+notifier.setupObserver(notification: notifier.toggleMicNotification) { notification in
+    // Handle the notification
+    print("Mic toggle notification received")
 }
 ```
 
-### Example Usage
+## Available Notifications
 
-```swift
-let dataToSend = [
-    "message": "Hello from TheBoringWorker",
-    "timestamp": Date().description
-]
+- `toggleMicNotification`
+- `toggleHudReplacementNotification`
+- `showClipboardNotification`
+- `sneakPeakNotification`
+- `micStatusNotification`
 
-sendNotification(withData: dataToSend, immediate: true)
-```
-
-## Receiving Notifications
-
-To receive notifications from `boring.notch`, use the following Swift code snippet:
-
-```swift
-import Foundation
-import Cocoa
-
-class NotificationReceiver {
-    private let notificationCenter = NSDistributedNotificationCenter.default
-    private let notificationName = "com.theboredteam.boring.notch.notification"
-
-    init() {
-        notificationCenter.addObserver(
-            self,
-            selector: #selector(handleNotification(_:)),
-            name: NSNotification.Name(notificationName),
-            object: nil
-        )
-    }
-
-    @objc private func handleNotification(_ notification: NSNotification) {
-        if let userInfo = notification.userInfo as? [String: Any] {
-            print("Received notification with data: \(userInfo)")
-            // Handle the received notification data
-        }
-    }
-
-    deinit {
-        notificationCenter.removeObserver(self)
-    }
-}
-```
-
-### Example Usage
-
-```swift
-let receiver = NotificationReceiver()
-// Notifications will be handled by the `handleNotification` method
-```
+Create your own notifications using `WorkerNotification` struct available with `TheBoringWorkerNotifier`
 
 ## UI Integration
 
