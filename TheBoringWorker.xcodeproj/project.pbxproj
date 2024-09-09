@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148544322C8F0CE900943381 /* TheBoringWorkerNotifier in Frameworks */ = {isa = PBXBuildFile; productRef = 148544312C8F0CE900943381 /* TheBoringWorkerNotifier */; };
 		14D4F9252C8D589F0093FA42 /* TheBoringWorkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9242C8D589F0093FA42 /* TheBoringWorkerApp.swift */; };
 		14D4F9272C8D589F0093FA42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9262C8D589F0093FA42 /* ContentView.swift */; };
 		14D4F9292C8D589F0093FA42 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D4F9282C8D589F0093FA42 /* Item.swift */; };
@@ -38,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D4F9402C8D5A220093FA42 /* LaunchAtLogin in Frameworks */,
+				148544322C8F0CE900943381 /* TheBoringWorkerNotifier in Frameworks */,
 				14D4F93D2C8D5A150093FA42 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +130,7 @@
 			packageProductDependencies = (
 				14D4F93C2C8D5A150093FA42 /* KeyboardShortcuts */,
 				14D4F93F2C8D5A220093FA42 /* LaunchAtLogin */,
+				148544312C8F0CE900943381 /* TheBoringWorkerNotifier */,
 			);
 			productName = TheBoringWorker;
 			productReference = 14D4F9212C8D589F0093FA42 /* TheBoringWorker.app */;
@@ -160,6 +163,7 @@
 			packageReferences = (
 				14D4F93B2C8D5A150093FA42 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				14D4F93E2C8D5A220093FA42 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+				148544302C8F0CE900943381 /* XCRemoteSwiftPackageReference "TheBoringWorkerNotifier" */,
 			);
 			productRefGroup = 14D4F9222C8D589F0093FA42 /* Products */;
 			projectDirPath = "";
@@ -323,14 +327,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TheBoringWorker/TheBoringWorker.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheBoringWorker/Preview Content\"";
-				DEVELOPMENT_TEAM = JPWMG84CH8;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = JPWMG84CH8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TheBoringWorker;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = theboringteam.TheBoringWorker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -351,14 +360,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TheBoringWorker/TheBoringWorker.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheBoringWorker/Preview Content\"";
-				DEVELOPMENT_TEAM = JPWMG84CH8;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = JPWMG84CH8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TheBoringWorker;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,6 +381,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = theboringteam.TheBoringWorker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -397,6 +411,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		148544302C8F0CE900943381 /* XCRemoteSwiftPackageReference "TheBoringWorkerNotifier" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TheBoredTeam/TheBoringWorkerNotifier.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		14D4F93B2C8D5A150093FA42 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
@@ -416,6 +438,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		148544312C8F0CE900943381 /* TheBoringWorkerNotifier */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 148544302C8F0CE900943381 /* XCRemoteSwiftPackageReference "TheBoringWorkerNotifier" */;
+			productName = TheBoringWorkerNotifier;
+		};
 		14D4F93C2C8D5A150093FA42 /* KeyboardShortcuts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14D4F93B2C8D5A150093FA42 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;

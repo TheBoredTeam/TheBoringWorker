@@ -66,20 +66,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func listenForBoringNotchEvent() {
-        DistributedNotificationCenter.default().addObserver(self, selector: #selector(handler(_:)), name: NSNotification.Name("theboringteam.theboringnotch.event-name"), object: nil)
-    }
-    
-    @objc func handler(_ notification: Notification) {
-        print("Clipboard toggled")
-        DispatchQueue.main.async {
-            // DO SOMETHING
-        }
-    }
-    
     func applicationDidFinishLaunching(_ notification: Notification) {
         
-        listenForBoringNotchEvent()
+        vm.setupWorkerNotifiers()
         
         NSApp.setActivationPolicy(.accessory)
         
